@@ -9,20 +9,11 @@ create() {
 }
 
 add() {
-    echo "Enter number of records to insert: "
-    read records
+    read -p "Enter number of records to insert " records
+    echo -e "Enter id\tName\tMarks"
 
     for ((i = 0; i < $records; i++)); do
-
-        echo "Enter id:"
-        read id
-
-        echo "Enter name:"
-        read name
-
-        echo "Enter marks:"
-        read marks
-
+        read id name marks
         echo -e "$id\t$name\t$marks" >>$fileName
     done
 }
