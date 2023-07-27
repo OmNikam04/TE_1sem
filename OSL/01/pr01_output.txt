@@ -1,0 +1,132 @@
+(base) mllab24@mllab24:~/Desktop/33350$ ./pr01.sh
+
+Enter your choice: 
+1:Create address book 
+2:View Address book 
+3:Insert Record 
+4:Delete Record 
+5:Search Record 
+6:Modify Record 
+7:Exit
+1
+File name:
+db.txt
+
+Enter your choice: 
+1:Create address book 
+2:View Address book 
+3:Insert Record 
+4:Delete Record 
+5:Search Record 
+6:Modify Record 
+7:Exit
+3
+Enter number of records to insert: 
+3
+Enter id        Name    Marks
+05 Shitanshu    54
+Enter id        Name    Marks
+07 somesh 87
+Enter id        Name    Marks
+09 sidhant 78
+
+Enter your choice: 
+1:Create address book 
+2:View Address book 
+3:Insert Record 
+4:Delete Record 
+5:Search Record 
+6:Modify Record 
+7:Exit
+2
+01      om      87
+02      atharv  98
+04      priyanshu       70
+05      Shitanshu       54
+07      somesh  87
+09      sidhant 78
+
+Enter your choice: 
+1:Create address book 
+2:View Address book 
+3:Insert Record 
+4:Delete Record 
+5:Search Record 
+6:Modify Record 
+7:Exit
+4
+Enter id to delete: 09
+09      sidhant 78
+Record being deleted: 
+
+Enter your choice: 
+1:Create address book 
+2:View Address book 
+3:Insert Record 
+4:Delete Record 
+5:Search Record 
+6:Modify Record 
+7:Exit
+2
+01      om      87
+02      atharv  98
+04      priyanshu       70
+05      Shitanshu       54
+07      somesh  87
+
+Enter your choice: 
+1:Create address book 
+2:View Address book 
+3:Insert Record 
+4:Delete Record 
+5:Search Record 
+6:Modify Record 
+7:Exit
+5
+Enter id to search: 07
+07      somesh  87
+Found the record
+
+Enter your choice: 
+1:Create address book 
+2:View Address book 
+3:Insert Record 
+4:Delete Record 
+5:Search Record 
+6:Modify Record 
+7:Exit
+6
+Enter id to moidfy: 07
+07      somesh  87
+Enter id:
+06
+Enter name:
+somehs
+Enter marks:
+
+
+Enter your choice: 
+1:Create address book 
+2:View Address book 
+3:Insert Record 
+4:Delete Record 
+5:Search Record 
+6:Modify Record 
+7:Exit
+2
+01      om      87
+02      atharv  98
+04      priyanshu       70
+05      Shitanshu       54
+06      somehs
+
+Enter your choice: 
+1:Create address book 
+2:View Address book 
+3:Insert Record 
+4:Delete Record 
+5:Search Record 
+6:Modify Record 
+7:Exit
+7 
+Thanks for using our services...
