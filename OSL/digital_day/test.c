@@ -16,7 +16,7 @@ int main(){
     // 4th parament is for passing arguments to function i.e. in our case compute()
     // pthread_create(&mythead1, NULL, compute, NULL);
     // pthread_join(mythead1, NULL);
-    // pthread_create(&mythead2, NULL, compute2, NULL);
+    pthread_create(&mythead2, NULL, compute2, NULL);
     // pthread_join(mythead2, NULL);
 
     // calling compute without thread

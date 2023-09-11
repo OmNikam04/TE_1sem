@@ -43,18 +43,18 @@ void knapsack(vector<int> &wt, vector<int> &profit, int n, int maxWeight)
             maxWeight = maxWeight - it.second.second;
             finalProfit = finalProfit + it.second.first;
         }
-        else if (maxWeight > 0 && it.second.second > maxWeight)
-        {
-            // fraction condition here
-            // take the ratio of remainining part and then multiply it to remainiing weight
-            // that will be your newly added profit
-            cout << "weight taken: " << it.second.second << endl;
-            double fractionalProfit = it.first * maxWeight;
-            cout << "fractionalProfit added: " << fractionalProfit << endl;
-            cout << "-------------------" << endl;
-            finalProfit += fractionalProfit;
-            maxWeight = maxWeight - maxWeight;
-        };
+        // else if (maxWeight > 0 && it.second.second > maxWeight)
+        // {
+        //     // fraction condition here
+        //     // take the ratio of remainining part and then multiply it to remainiing weight
+        //     // that will be your newly added profit
+        //     cout << "weight taken: " << it.second.second << endl;
+        //     double fractionalProfit = it.first * maxWeight;
+        //     cout << "fractionalProfit added: " << fractionalProfit << endl;
+        //     cout << "-------------------" << endl;
+        //     finalProfit += fractionalProfit;
+        //     maxWeight = maxWeight - maxWeight;
+        // };
     }
 
     cout << "weight of knapsack became: " << maxWeight << endl;
@@ -71,7 +71,7 @@ int main()
     cin >> W;
     vector<int> wt, profit;
     
-    cout<<"Enter profit:\t";
+    cout<<"Enter profits:\t";
     for (int i = 0; i < n; i++)
     {
         int x;
@@ -79,7 +79,7 @@ int main()
         profit.push_back(x);
     }
     cout<<endl;
-    cout<<"Enter profit:\t";
+    cout<<"Enter weights:\t";
     for (int i = 0; i < n; i++)
     {
         int x;

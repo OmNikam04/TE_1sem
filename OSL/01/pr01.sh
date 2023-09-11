@@ -1,17 +1,14 @@
 #!/bin/bash
 
-# Creating file to store the database
 create() {
     echo "File name:"
     read fileName
     fileName=$fileName
     touch $fileName
-    # echo "ID Name Marks" >> $fileName
 }
 
 generate_id() {
     if [ -e "$fileName" ]; then
-        # Get the last used ID from the file or start from 1 if the file is empty
         last_id=$(tail -n 1 "$fileName" | cut -f1)
         if [ -z "$last_id" ]; then
             echo 1
@@ -136,7 +133,7 @@ while [ $choice -lt 8 ]; do
         modify
         ;;
     *)
-        echo "Thanks for using our services..."
+        echo "Exiting..."
         ;;
     esac
 done
