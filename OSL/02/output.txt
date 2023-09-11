@@ -1,0 +1,30 @@
+om@ryzu:/mnt/d/TE_1sem/Labs/osl/02$ gcc pr02.c && ./a.out
+Enter the number of integers: 5
+Enter 5 integers: 90 12 43 64 78 
+
+
+Parent process (ID: 39) is sorting using Merge Sort:
+Child process (ID: 40) is sorting using Quick Sort:
+Sorted by Parent Process: 12 43 64 78 90
+Sorted by Child Process: 12 43 64 78 90
+
+Parent process (ID: 39) is waiting...
+
+Parent process (ID: 39) is sleeping for 5 seconds...
+
+Parent process (ID: 39) is exiting.
+
+
+------------------------------------------------------------------------------
+
+
+om@ryzu:/mnt/d/TE_1sem/Labs/osl/02$ gcc -o parent pr02_b.c
+om@ryzu:/mnt/d/TE_1sem/Labs/osl/02$ gcc -o display_reverse display_reverse.c 
+
+om@ryzu:/mnt/d/TE_1sem/Labs/osl/02$ ./parent
+Enter the number of integers: 5
+Enter 5 integers: 98 23 54 68 65
+Usage: ./display_reverse <integer1> <integer2> ...
+Parent Process: Passing sorted array to child process...
+23 54 65 68 98
+Parent process is exiting.
