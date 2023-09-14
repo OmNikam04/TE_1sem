@@ -30,3 +30,7 @@ int main(){
 - Third fork() call: Now, all four processes execute the third fork() call, creating four more child processes, making the total number of processes seven (one parent and six child processes).
 
 `` With n fork statements, there are always 2^n – 1 child processes and 2^n total process``
+
+
+## Exec: 
+https://linuxhint.com/linux-exec-system-call/
