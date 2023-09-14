@@ -26,7 +26,7 @@ int main(){
 `` Total 8 prcess created by above program here is breakdown of it. ``
 
 - First fork() call: It creates one child process, so there are now two processes (the parent and the child). 
-- Second fork() call: Both the parent and the child process created in the first call execute the second fork() call. This creates two more child processes, making the total number of processes four (one parent and three child processes). 
+- Second fork() call: Both the parent and the child process created in the first call execute the second fork() call. This creates two more child processes, making the total number of processes four (one parent and three child processes).  
 - Third fork() call: Now, all four processes execute the third fork() call, creating four more child processes, making the total number of processes seven (one parent and six child processes).
 
 `` With n fork statements, there are always 2^n – 1 child processes and 2^n total process``
