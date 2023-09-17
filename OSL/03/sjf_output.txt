@@ -1,0 +1,26 @@
+mllab13@mllab13:~/Desktop/33350$ g++ sjf_preemptive.cpp && ./a.out
+Enter the number of processes: 4
+Enter details for Process 1:
+Enter Process ID: 1
+Enter Burst Time: 6
+Enter Arrival Time: 0
+Enter details for Process 2:
+Enter Process ID: 2
+Enter Burst Time: 4
+Enter Arrival Time: 1
+Enter details for Process 3:
+Enter Process ID: 3
+Enter Burst Time: 2
+Enter Arrival Time: 2
+Enter details for Process 4:
+Enter Process ID: 4
+Enter Burst Time: 3
+Enter Arrival Time: 3
+ P              BT              WT              TAT
+ 1              6                9               15
+ 2              4                2               6
+ 3              2                0               2
+ 4              3                4               7
+
+Average waiting time = 3.75
+Average turnaround time = 7.5
