@@ -27,17 +27,23 @@ int main() {
         perror("Fork failed");
         exit(1);
     } else if (pid == 0) {
-        // Child process
-        char *args[4];
-        args[0] = "./display_reverse"; // Name of the child program
-        args[1] = NULL;
-        args[2] = NULL;
-        args[3] = NULL;
+    // Child process
+    // Convert the sorted integers to strings
+    char *args[n + 2]; // +2 for the program name and NULL terminator
+    args[0] = "./display_reverse"; // Name of the child program
 
-        execve(args[0], args, NULL);
-        perror("Execve failed");
-        exit(1);
-    } else {
+    // Convert and pass the sorted integers as command-line arguments
+    for (int i = 0; i < n; i++) {
+        args[i + 1] = malloc(12); // Assuming a maximum of 11 digits for an integer
+        snprintf(args[i + 1], 12, "%d", arr[i]);
+    }
+
+    args[n + 1] = NULL; // NULL terminator for the arguments list
+
+    execve(args[0], args, NULL);
+    perror("Execve failed");
+    exit(1);
+} else {
         // Parent process
         // Wait for the child process to finish
         int status;

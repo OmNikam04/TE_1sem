@@ -9,8 +9,11 @@ int main(int argc, char *argv[]) {
 
     printf("Child Process: Displaying sorted array in reverse order...\n");
 
+    // Start from the last argument (sorted integers) and go in reverse order
     for (int i = argc - 1; i > 0; i--) {
-        printf("%s ", argv[i]);
+        // Convert the string argument back to an integer
+        int num = atoi(argv[i]);
+        printf("%d ", num);
     }
     printf("\n");
 
