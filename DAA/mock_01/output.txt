@@ -1,0 +1,63 @@
+pict@dbmslaba330508-OptiPlex-5060:~/33350$ g++ knapsack_01.cpp && ./a.out
+Enter the number of items
+4
+Enter weight for each items
+2 3 4 5
+Enter profit for each item
+3 4 5 6
+Enter capacity for knapsack
+5
+Do you want to see tabulation: y/n      y
+0 0 0 0 0 0 
+0 0 3 3 3 3 
+0 0 3 4 4 7 
+0 0 3 4 5 7 
+0 0 3 4 5 7 
+
+Do you want to see selected items: y/n  y
+Items selected: 2 1 
+Maximum profit obtained using 0/1 knapsack is : 7
+pict@dbmslaba330508-OptiPlex-5060:~/33350$ g++ knapsack_01.cpp && ./a.out
+Enter the number of items
+4
+Enter weight for each items
+2 3 4 5
+Enter profit for each item
+1 2 5 6
+Enter capacity for knapsack
+8
+Do you want to see tabulation: y/n      y
+0 0 0 0 0 0 0 0 0 
+0 0 1 1 1 1 1 1 1 
+0 0 1 2 2 3 3 3 3 
+0 0 1 2 5 5 6 7 7 
+0 0 1 2 5 6 6 7 8 
+
+Do you want to see selected items: y/n  y
+Items selected: 4 2 
+Maximum profit obtained using 0/1 knapsack is : 8
+pict@dbmslaba330508-OptiPlex-5060:~/33350$ g++ knapsack_01.cpp && ./a.out
+Enter the number of items
+4
+Enter weight for each items
+^C
+pict@dbmslaba330508-OptiPlex-5060:~/33350$ g++ knapsack_01.cpp && ./a.out
+Enter the number of items
+5
+Enter weight for each items
+0 2 3 4 5
+Enter profit for each item
+0 1 2 5 6
+Enter capacity for knapsack
+8
+Do you want to see tabulation: y/n      y
+0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 
+0 0 1 1 1 1 1 1 1 
+0 0 1 2 2 3 3 3 3 
+0 0 1 2 5 5 6 7 7 
+0 0 1 2 5 6 6 7 8 
+
+Do you want to see selected items: y/n  y
+Items selected: 5 3 
+Maximum profit obtained using 0/1 knapsack is : 8
