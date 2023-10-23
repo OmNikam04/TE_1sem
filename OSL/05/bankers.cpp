@@ -77,7 +77,7 @@ int main()
     cout<<ava<<" "<<avb<<" "<<avc<<endl;
     cout<<"\n\nThe Order Of Completion of processes is: "<<endl;
     for(int i=0; i<n; i++){
-        cout<<"P"<<processes[i]<<"\t";
+        cout<<"P"<<processes[i]<<"->";
     }
     return 0;
 }
