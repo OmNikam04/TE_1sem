@@ -97,6 +97,7 @@ void SSTF(int *tracks, int head, int n)
     {
         printf("%d->", seek_sequence[i]);
     }
+    printf("\n");
 }
 
 // void is added to comparator function to make it more generic and work with different data types
@@ -193,5 +194,5 @@ int main()
     scanf("%d", &head);
 
     // SSTF(tracks, head, n);
-    SCAN(tracks, head, n, 0);
+    // SCAN(tracks, head, n, 0);
 }
