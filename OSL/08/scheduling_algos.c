@@ -179,6 +179,73 @@ void SCAN(int *tracks, int head, int n, int direction)
     }
 }
 
+void CLOOK(int *tracks, int head, int n)
+{
+
+    int leftside[n], rightside[n];
+    int left = 0, right = 0;
+    for (int i = 0; i < n; i++)
+    {
+        if (tracks[i] < head)
+            leftside[left++] = tracks[i];
+        if (tracks[i] > head)
+            rightside[right++] = tracks[i];
+    }
+
+    qsort(leftside, left, sizeof(int), comp);
+    qsort(rightside, right, sizeof(int), comp);
+    
+    int seek_sequence[n + 1];
+    int curr_track, dist, seek_count = 0;
+    int index = 0;
+
+    // first service the request on right side of head
+    for (int i = 0; i < right; i++)
+    {
+        curr_track = rightside[i];
+
+        seek_sequence[index++] = curr_track;
+
+        // calculate distance
+        dist = fabs(head - curr_track);
+
+        // calculate seekcount
+        seek_count += dist;
+
+        // update the head
+        head = curr_track;
+    }
+    // once reached to the right end then go to
+    // start of left side
+    // therefore calculate the seekcount for going to right end to leftstart
+    dist = fabs(head - leftside[0]);
+    seek_count += dist;
+    head = leftside[0];
+    // now go to the start of left side
+    // and start services request from that point
+    for (int i = 0; i < left; i++)
+    {
+        curr_track = leftside[i];
+        seek_sequence[index++] = curr_track;
+
+        dist = fabs(head - curr_track);
+
+        seek_count += dist;
+
+        head = curr_track;
+    }
+
+    printf("Total number of seek operations performed: %d\n", seek_count);
+
+    printf("Seek sequence is: \n");
+
+    for (int i = 0; i < index; i++)
+    {
+        printf("%d\t", seek_sequence[i]);
+    }
+    printf("\n");
+}
+
 int main()
 {
     int n;
@@ -186,13 +253,13 @@ int main()
     scanf("%d", &n);
     int tracks[n];
     for (int i = 0; i < n; i++)
-    {
         scanf("%d", &tracks[i]);
-    }
+
     int head;
     printf("Enter initial head position: ");
     scanf("%d", &head);
 
     // SSTF(tracks, head, n);
     // SCAN(tracks, head, n, 0);
+    CLOOK(tracks, head, n);
 }
