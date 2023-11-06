@@ -26,8 +26,8 @@ int main(){
 
     //todo: Read the sentence from fifo
     int fd2 = open("/tmp/myfifo", O_RDONLY);
-    char readSentence[size+200];
-    read(fd2, readSentence, size+200);
+    char readSentence[300];
+    read(fd2, readSentence, 300);
     printf("Output from fifo2: \n");
     printf("%s\n", readSentence);
 
