@@ -10,7 +10,6 @@
 int main() 
 { 
     int fd1; 
-  
     // FIFO file path 
     char * myfifo1 = "/tmp/myfifo1";
     char * myfifo2 = "/tmp/myfifo2";  

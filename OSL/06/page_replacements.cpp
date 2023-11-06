@@ -1,4 +1,10 @@
 #include <stdio.h>
+
+// 1. Check if page is present in queue or not
+// 2. If not present in queue means page fault occured -> miss++
+// 3. If present in queue mean page fault is not occured -> hit++
+// 4. Add each queue each time into row of 2d answer array
+
 void fifo(int pro[], int q[], int n, int f)
 {
 
@@ -16,20 +22,26 @@ void fifo(int pro[], int q[], int n, int f)
         int cnt = 0;
         for (int j = 0; j < f; j++)
         {
+            // to check whether page is already in memory or not
             if (pro[i] == q[j])
             {
                 cnt++;
                 break;
             }
         }
+
         if (cnt == 0)
         {
+            // required page is not in main memory
+            // and page fault has occured
             q[s] = pro[i];
             s = (s + 1) % f;
             miss++;
         }
         else
         {
+            // there is not need to find the page in secondary memory
+            // i.e. page fault is not occured
             hit++;
         }
         for (int row = 0; row < f; row++)
@@ -38,6 +50,7 @@ void fifo(int pro[], int q[], int n, int f)
         }
         col++;
     }
+
     for (int i = 0; i < f; i++)
     {
         printf("f%d ", i + 1);
@@ -58,6 +71,7 @@ void fifo(int pro[], int q[], int n, int f)
     printf("\nTotal miss:%d\n", miss);
     printf("---------------------------------------------------------\n");
 }
+
 void OptimalAlgo(int pro[], int q[], int n, int f)
 {
 
@@ -99,6 +113,7 @@ void OptimalAlgo(int pro[], int q[], int n, int f)
             {
                 for (int k = 0; k < f; k++)
                 {
+                    // if process is already in frame
                     if (pro[j] == q[k])
                     {
                         v = pro[j];
@@ -174,7 +189,6 @@ void OptimalAlgo(int pro[], int q[], int n, int f)
             }
             else
             {
-
                 for (int j = 0; j < f; j++)
                 {
                     if (s[j] == -1)

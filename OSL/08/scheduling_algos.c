@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <math.h>
+// this library is for qsort function
 #include <stdlib.h>
+// this library is for memset function
 #include <string.h>
 
 #define disk_size 200
