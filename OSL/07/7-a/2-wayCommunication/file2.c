@@ -23,7 +23,7 @@ int main()
     while (1) 
     { 
         // First open in read only and read 
-        fd1 = open(myfifo1,O_RDONLY); 
+        fd1 = open(myfifo1, O_RDONLY); 
         read(fd1, str1, 80); 
   
         // Print the read string and close 
@@ -32,7 +32,7 @@ int main()
   
         // Now open in write mode and write 
         // string taken from user. 
-        fd1 = open(myfifo2,O_WRONLY); 
+        fd1 = open(myfifo2, O_WRONLY); 
         fgets(str2, 80, stdin); 
         write(fd1, str2, strlen(str2)+1); 
         close(fd1); 

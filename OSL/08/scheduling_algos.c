@@ -262,6 +262,6 @@ int main()
     scanf("%d", &head);
 
     // SSTF(tracks, head, n);
-    // SCAN(tracks, head, n, 0);
-    CLOOK(tracks, head, n);
+    SCAN(tracks, head, n, 1);
+    // CLOOK(tracks, head, n);
 }
