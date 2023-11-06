@@ -147,22 +147,6 @@ int main()
     }
 
     round_robin(proc, n, tq, first_proc_ind);
-    // printAnswer(proc, n);
-    cout << "Process\tArrival Time\tBurst Time\tCompletion Time\tWaiting Time\tTurn-around Time\n";
-    for (int i = 0; i < n; i++)
-    {
-        cout << proc[i].p_id << "\t\t" << proc[i].at << "\t\t" << proc[i].bt << "\t\t" << proc[i].ct << "\t\t" << proc[i].wt << "\t\t" << proc[i].tat << endl;
-    }
-    cout << endl;
-    float awt = 0.0, atat = 0.0;
-    for (int i = 0; i < n; i++)
-    {
-        awt += proc[i].wt;
-        atat += proc[i].tat;
-    }
-    awt = awt / n;
-    atat = atat / n;
-    cout << "Average Waiting time is: " << awt << endl;
-    cout << "Average Turn around time is: " << atat << endl;
+    printAnswer(proc, n);
     return 0;
 }
