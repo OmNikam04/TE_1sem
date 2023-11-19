@@ -43,18 +43,18 @@ void knapsack(vector<int> &wt, vector<int> &profit, int n, int maxWeight)
             maxWeight = maxWeight - it.second.second;
             finalProfit = finalProfit + it.second.first;
         }
-        // else if (maxWeight > 0 && it.second.second > maxWeight)
-        // {
-        //     // fraction condition here
-        //     // take the ratio of remainining part and then multiply it to remainiing weight
-        //     // that will be your newly added profit
-        //     cout << "weight taken: " << it.second.second << endl;
-        //     double fractionalProfit = it.first * maxWeight;
-        //     cout << "fractionalProfit added: " << fractionalProfit << endl;
-        //     cout << "-------------------" << endl;
-        //     finalProfit += fractionalProfit;
-        //     maxWeight = maxWeight - maxWeight;
-        // };
+        else if (maxWeight > 0 && it.second.second > maxWeight)
+        {
+            // fraction condition here
+            // take the ratio of remainining part and then multiply it to remainiing weight
+            // that will be your newly added profit
+            cout << "weight taken: " << it.second.second << endl;
+            double fractionalProfit = it.first * maxWeight;
+            cout << "fractionalProfit added: " << fractionalProfit << endl;
+            cout << "-------------------" << endl;
+            finalProfit += fractionalProfit;
+            maxWeight = maxWeight - maxWeight;
+        };
     }
 
     cout << "weight of knapsack became: " << maxWeight << endl;

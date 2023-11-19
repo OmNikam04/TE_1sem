@@ -4,6 +4,7 @@ struct edge
 {
     int s, d, w;
 };
+
 int bellmanFord(int n, int e, int src, vector<edge> &edges, vector<int> &dist, vector<int> &parent)
 {
     int i, j;
@@ -62,7 +63,7 @@ int main()
     for (i = 0; i < e; i++)
     {
         cin >> s >> d >> edges[i].w;
-        edges[i].s = s - 1;
+        edges[i].s = s - 1; // to adjust 0 based indexing
         edges[i].d = d - 1;
     }
     cout << "Enter the source vertex ";
